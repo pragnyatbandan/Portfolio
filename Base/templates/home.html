@@ -1,0 +1,677 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Pragnyat Bandan | Full Stack Developer</title>
+    <meta name="description" content="Portfolio of Pragnyat Bandan, a Full Stack Developer building modern, scalable and user-centric web applications with React and Django.">
+    <meta name="theme-color" content="#060a1c">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@500&family=Ubuntu:wght@300;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=8">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-logo">Pragnyat<span class="pl-accent">.</span></div>
+        <div class="preloader-ring"></div>
+        <div class="preloader-bar-track"><div class="preloader-bar-fill"></div></div>
+        <div class="preloader-text">LOADING PORTFOLIO<span class="pl-dots"><span>.</span><span>.</span><span>.</span></span></div>
+    </div>
+    <script>document.documentElement.classList.add("is-loading");</script>
+
+    <!-- Navbar Section -->
+    <nav id="navbar" class="flex s-around bg-color" aria-label="Primary">
+        <div class="left-nav">
+            <a href="#home" class="nav-brand"><h2 class="t-white">Portfolio</h2></a>
+        </div>
+        <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
+        <div class="right-nav" id="navMenu">
+            <ul class="flex">
+                <li><a href="#home" class="t-white roboto">Home <i class="fa-solid fa-house"></i></a></li>
+                <li><a href="#about" class="t-white roboto">About Me <i class="fa-solid fa-user"></i></a></li>
+                <li><a href="#skills" class="t-white roboto">Skills <i class="fa-solid fa-code"></i></a></li>
+                <li><a href="#Projects" class="t-white roboto">Projects <i class="fas fa-project-diagram"></i></a></li>
+                <li><a href="#Contact" class="t-white roboto">Contact <i class="fa-solid fa-rocket"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <main id="main">
+    <section id="home" class="hero-section">
+        <!-- Full-bleed background photo -->
+        <img src="{% static 'images/PG1.png' %}" alt="Pragnyat Bandan" class="hero-photo" fetchpriority="high" decoding="async">
+        <div class="hero-photo-fade"></div>
+
+        <!-- Decorative dot grids -->
+        <div class="hero-dots hero-dots-top"></div>
+        <div class="hero-dots hero-dots-bottom"></div>
+
+        <!-- Decorative rings -->
+        <div class="hero-ring hero-ring-small"></div>
+        <div class="hero-ring hero-ring-mid"></div>
+
+        <div class="hero-container flex">
+            <div class="hero-left">
+                <p class="hero-greeting poppins">Hi, I'm</p>
+                <h1 class="hero-name">
+                    <span class="t-white">Pragnyat</span>
+                    <span class="hero-gradient">Bandan</span>
+                </h1>
+                <h4 class="hero-role poppins">Full Stack Developer</h4>
+
+                <div class="hero-stack poppins">
+                    <span>React</span>
+                    <span class="hero-dot-sep">&bull;</span>
+                    <span>Django</span>
+                    <span class="hero-dot-sep">&bull;</span>
+                    <span>Python</span>
+                    <span class="hero-dot-sep">&bull;</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <p class="hero-desc poppins">Building modern, scalable and user-centric
+                    web applications.</p>
+
+                <div class="hero-buttons">
+                    <a href="#Projects" class="btn-primary poppins">View My Work <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="{% static 'pdf/Pragnyat Resume.pdf' %}" target="_blank" class="btn-outline poppins">Download Resume <i class="fa-solid fa-download"></i></a>
+                </div>
+
+                <div class="hero-social">
+                    <a href="https://github.com/Pragnyat" target="_blank" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/pragnyat-bandan-a0773a255/" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="mailto:pragnyat9437@gmail.com" class="social-icon" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-decor about-decor-1"></div>
+        <div class="about-decor about-decor-2"></div>
+
+        <div class="about-eyebrow-wrap reveal">
+            <span class="about-eyebrow-line"></span>
+            <span class="about-eyebrow poppins">GET TO KNOW MORE</span>
+            <span class="about-eyebrow-line"></span>
+        </div>
+        <h2 class="about-title reveal" style="--d:.1s">About Me</h2>
+
+        <div class="about-container flex">
+            <div class="about-left reveal-left">
+                <div class="about-dots"></div>
+                <div class="about-circle-accent"></div>
+                <div class="about-photo-card">
+                    <img src="{% static 'images/avatar.png' %}" alt="Pragnyat Bandan" class="about-photo" loading="lazy" decoding="async">
+                </div>
+                <div class="about-corner-accent"></div>
+            </div>
+
+            <div class="about-right flex reveal-right" style="--d:.15s">
+                <div class="about-card">
+                    <h2 class="about-heading poppins">Hi! I'm <span class="about-accent">Pragnyat Bandan</span></h2>
+
+                    <p class="about-text poppins">I'm a <span class="about-accent">Computer Engineering</span> student
+                        at <span class="about-accent">Silicon University</span> with a passion for full-stack
+                        development. I enjoy building applications that are both functional and visually appealing.</p>
+
+                    <p class="about-text poppins">Over the past few months, I've worked on real-world projects during
+                        my internships, where I gained hands-on experience with
+                        <span class="about-accent">React, Django,
+                        React Native, REST APIs</span>, and modern web technologies. These experiences taught me how
+                        to write cleaner code, work in a team, and solve practical development challenges.</p>
+
+                    <p class="about-text poppins">I'm always curious to learn something new, whether it's a
+                        framework, a development tool, or a better way to solve a problem. My goal is to build
+                        software that creates a great experience for users while continuously growing as a
+                        developer.</p>
+
+                    <div class="about-info-grid">
+                        <div class="about-info-card">
+                            <div class="about-info-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <div>
+                                <h4 class="poppins">Education</h4>
+                                <p class="poppins">B.Tech Computer Engineering</p>
+                            </div>
+                        </div>
+                        <div class="about-info-card">
+                            <div class="about-info-icon"><i class="fa-solid fa-code"></i></div>
+                            <div>
+                                <h4 class="poppins">Focus</h4>
+                                <p class="poppins">Full Stack Development</p>
+                            </div>
+                        </div>
+                        <div class="about-info-card">
+                            <div class="about-info-icon"><i class="fa-solid fa-briefcase"></i></div>
+                            <div>
+                                <h4 class="poppins">Experience</h4>
+                                <p class="poppins">Internships & Personal Projects</p>
+                            </div>
+                        </div>
+                        <div class="about-info-card">
+                            <div class="about-info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <h4 class="poppins">Location</h4>
+                                <p class="poppins">Odisha, India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="skills-decor skills-decor-dots"></div>
+        <div class="skills-decor skills-decor-ring"></div>
+
+        <div class="skills-heading-wrap reveal">
+            <span class="skills-heading-line"></span>
+            <span class="skills-heading-icon"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+            <h2 class="skills-title">Skills</h2>
+            <span class="skills-heading-line"></span>
+        </div>
+        <div class="skills-heading-dot-wrap reveal" style="--d:.08s">
+            <span class="skills-heading-dot-line"></span>
+            <span class="skills-heading-dot"></span>
+            <span class="skills-heading-dot-line"></span>
+        </div>
+
+        <p class="skills-desc poppins reveal" style="--d:.16s">Throughout my projects and internships, I've gained practical experience
+            with a wide range of technologies used in modern web and mobile development.</p>
+
+        <div class="skills-groups reveal-stagger">
+
+            <!-- Frontend -->
+            <div class="skills-row">
+                <div class="skills-row-label">
+                    <div class="skills-row-icon icon-frontend"><i class="fa-solid fa-display"></i></div>
+                    <h3 class="poppins">Frontend Development</h3>
+                </div>
+                <div class="skills-row-divider"></div>
+                <div class="skills-row-items reveal-stagger">
+                    <div class="skill-item"><div class="skill-icon"><i class="fa-brands fa-react" style="color:#61dafb"></i></div><span class="poppins">React.js</span></div>
+                    <div class="skill-item"><div class="skill-icon"><i class="fa-brands fa-react" style="color:#149eca"></i></div><span class="poppins">React Native</span></div>
+                    <div class="skill-item"><div class="skill-icon"><i class="fa-brands fa-html5" style="color:#e34f26"></i></div><span class="poppins">HTML</span></div>
+                    <div class="skill-item"><div class="skill-icon"><i class="fa-brands fa-css3-alt" style="color:#2965f1"></i></div><span class="poppins">CSS</span></div>
+                    <div class="skill-item"><div class="skill-icon skill-icon-js"><i class="fa-brands fa-js"></i></div><span class="poppins">JavaScript</span></div>
+                    <div class="skill-item"><div class="skill-icon"><i class="fa-solid fa-wind" style="color:#38bdf8"></i></div><span class="poppins">Tailwind CSS</span></div>
+                    <div class="skill-item"><div class="skill-icon"><i class="fa-brands fa-angular" style="color:#dd0031"></i></div><span class="poppins">Angular</span></div>
+                    <div class="skill-item"><div class="skill-icon skill-icon-next"><i class="fa-solid fa-n"></i></div><span class="poppins">Next.js</span></div>
+                </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="skills-row">
+                <div class="skills-row-label">
+                    <div class="skills-row-icon icon-backend"><i class="fa-solid fa-server"></i></div>
+                    <h3 class="poppins">Backend Development</h3>
+                </div>
+                <div class="skills-row-divider"></div>
+                <div class="skills-row-items reveal-stagger">
+                    <div class="skill-item"><div class="skill-icon skill-icon-text" style="color:#092e20">dj</div><span class="poppins">Django</span></div>
+                    <div class="skill-item"><div class="skill-icon skill-icon-text skill-icon-drf" style="color:#092e20">dj<sub>REST</sub></div><span class="poppins">Django REST<br>Framework</span></div>
+                    <div class="skill-item"><div class="skill-icon"><i class="fa-brands fa-node-js" style="color:#3c873a"></i></div><span class="poppins">Node.js</span></div>
+                    <div class="skill-item"><div class="skill-icon skill-icon-text" style="color:#1a1a1a">ex</div><span class="poppins">Express.js</span></div>
+                    <div class="skill-item"><div class="skill-icon skill-icon-text skill-icon-rest" style="color:#2f5fd6">{...}</div><span class="poppins">REST APIs</span></div>
+                </div>
+            </div>
+
+            <!-- Programming Languages -->
+            <div class="skills-row">
+                <div class="skills-row-label">
+                    <div class="skills-row-icon icon-tools"><i class="fa-solid fa-terminal"></i></div>
+                    <h3 class="poppins">Programming Languages</h3>
+                </div>
+                <div class="skills-row-divider"></div>
+                <div class="skills-row-items reveal-stagger">
+                    <div class="skill-item"><div class="skill-icon"><i class="fa-brands fa-python" style="color:#3776ab"></i></div><span class="poppins">Python</span></div>
+                    <div class="skill-item"><div class="skill-icon skill-icon-js"><i class="fa-brands fa-js"></i></div><span class="poppins">JavaScript</span></div>
+                </div>
+            </div>
+
+            <!-- Databases -->
+            <div class="skills-row">
+                <div class="skills-row-label">
+                    <div class="skills-row-icon icon-db"><i class="fa-solid fa-database"></i></div>
+                    <h3 class="poppins">Databases</h3>
+                </div>
+                <div class="skills-row-divider"></div>
+                <div class="skills-row-items reveal-stagger">
+                    <div class="skill-item"><div class="skill-icon"><i class="fa-solid fa-dolphin" style="color:#00758f"></i></div><span class="poppins">MySQL</span></div>
+                    <div class="skill-item"><div class="skill-icon"><i class="fa-solid fa-elephant" style="color:#336791"></i></div><span class="poppins">PostgreSQL</span></div>
+                    <div class="skill-item"><div class="skill-icon"><i class="fa-solid fa-leaf" style="color:#4db33d"></i></div><span class="poppins">MongoDB</span></div>
+                </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="skills-row">
+                <div class="skills-row-label">
+                    <div class="skills-row-icon icon-tools"><i class="fa-solid fa-briefcase"></i></div>
+                    <h3 class="poppins">Frameworks &amp; Tools</h3>
+                </div>
+                <div class="skills-row-divider"></div>
+                <div class="skills-row-items reveal-stagger">
+                    <div class="skill-item"><div class="skill-icon"><i class="fa-brands fa-git-alt" style="color:#f05033"></i></div><span class="poppins">Git</span></div>
+                    <div class="skill-item"><div class="skill-icon"><i class="fa-brands fa-github" style="color:#181717"></i></div><span class="poppins">GitHub</span></div>
+                    <div class="skill-item"><div class="skill-icon"><i class="fa-solid fa-code" style="color:#007acc"></i></div><span class="poppins">VS Code</span></div>
+                    <div class="skill-item"><div class="skill-icon"><i class="fa-solid fa-bolt" style="color:#a855f7"></i></div><span class="poppins">Vite</span></div>
+                    <div class="skill-item"><div class="skill-icon"><i class="fa-solid fa-star-of-life" style="color:#4285f4"></i></div><span class="poppins">Gemini API</span></div>
+                    <div class="skill-item"><div class="skill-icon"><i class="fa-solid fa-chart-column" style="color:#150458"></i></div><span class="poppins">Pandas</span></div>
+                    <div class="skill-item"><div class="skill-icon"><i class="fa-solid fa-square-root-variable" style="color:#4dabcf"></i></div><span class="poppins">NumPy</span></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+        <!-- Projects Section -->
+    <section id="Projects" class="projects-section">
+        <div class="projects-decor projects-decor-dots"></div>
+        <div class="projects-decor projects-decor-ring"></div>
+
+        <div class="projects-eyebrow-wrap reveal">
+            <span class="projects-eyebrow-line"></span>
+            <span class="projects-eyebrow-dot"></span>
+            <span class="projects-eyebrow poppins">MY WORK</span>
+            <span class="projects-eyebrow-dot"></span>
+            <span class="projects-eyebrow-line"></span>
+        </div>
+        <h2 class="projects-title reveal" style="--d:.1s">Projects</h2>
+        <p class="projects-desc poppins reveal" style="--d:.2s">Here are some of the projects I've worked on. Each one helped me learn,
+            grow, and improve my skills as a developer.</p>
+
+        <div class="projects-container reveal-stagger">
+
+            <!-- WeatherSphere -->
+            <div class="project-card">
+                <div class="project-card-head">
+                    <div class="project-icon icon-weather"><i class="fa-solid fa-cloud-sun"></i></div>
+                    <div>
+                        <h2 class="poppins">WeatherSphere</h2>
+                        <p class="project-subtitle sub-blue poppins">Full-Stack Weather Application</p>
+                    </div>
+                </div>
+                <div class="project-divider"></div>
+                <p class="project-desc poppins">WeatherSphere is a modern weather application that provides
+                    real-time weather updates, hourly and weekly forecasts, air quality information, and weather
+                    alerts. The project combines a React frontend with a Django backend to deliver fast, reliable,
+                    and user-friendly weather information.</p>
+
+                <span class="project-tech-label poppins">TECHNOLOGIES USED</span>
+                <div class="project-tech-list">
+                    <span class="tech-pill poppins"><i class="fa-brands fa-react" style="color:#61dafb"></i>React</span>
+                    <span class="tech-pill poppins"><span class="tech-pill-dj">dj</span>Django</span>
+                    <span class="tech-pill poppins"><i class="fa-solid fa-cloud-arrow-down" style="color:#2f5fd6"></i>REST API</span>
+                </div>
+
+                <div class="project-divider"></div>
+                <div class="project-footer">
+                    <a href="https://github.com/Pragnyat/Weather-App" target="_blank" class="project-link poppins"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a class="project-link project-link-demo poppins is-disabled" aria-disabled="true" title="Link coming soon">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- FlavorFlash -->
+            <div class="project-card">
+                <div class="project-card-head">
+                    <div class="project-icon icon-flavor"><i class="fa-solid fa-bag-shopping"></i></div>
+                    <div>
+                        <h2 class="poppins">FlavorFlash</h2>
+                        <p class="project-subtitle sub-orange poppins">Mobile Food Ordering Application</p>
+                    </div>
+                </div>
+                <div class="project-divider"></div>
+                <p class="project-desc poppins">FlavorFlash is a React Native application designed to make snack
+                    ordering simple and enjoyable. Users can browse products, manage favorites, add items to the
+                    cart, and enjoy a seamless experience with light and dark themes.</p>
+
+                <span class="project-tech-label poppins">TECHNOLOGIES USED</span>
+                <div class="project-tech-list">
+                    <span class="tech-pill poppins"><i class="fa-brands fa-react" style="color:#149eca"></i>React Native</span>
+                    <span class="tech-pill poppins"><i class="fa-solid fa-play" style="color:#000"></i>Expo</span>
+                    <span class="tech-pill poppins"><i class="fa-solid fa-box-archive" style="color:#7c4de0"></i>AsyncStorage</span>
+                    <span class="tech-pill poppins"><i class="fa-solid fa-diagram-project" style="color:#ea7d1a"></i>Context API</span>
+                </div>
+
+                <div class="project-divider"></div>
+                <div class="project-footer">
+                    <a href="https://github.com/Pragnyat/MyExpoProject" target="_blank" class="project-link poppins"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a class="project-link project-link-demo poppins is-disabled" aria-disabled="true" title="Link coming soon">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Fitness Platform -->
+            <div class="project-card">
+                <div class="project-card-head">
+                    <div class="project-icon icon-fitness"><i class="fa-solid fa-dumbbell"></i></div>
+                    <div>
+                        <h2 class="poppins">Fitness Platform</h2>
+                        <p class="project-subtitle sub-green poppins">Full-Stack Fitness Website</p>
+                    </div>
+                </div>
+                <div class="project-divider"></div>
+                <p class="project-desc poppins">A responsive fitness platform built using modern full-stack
+                    technologies. The project focuses on delivering a clean interface, smooth navigation, and a
+                    scalable backend while providing users with an engaging experience.</p>
+
+                <span class="project-tech-label poppins">TECHNOLOGIES USED</span>
+                <div class="project-tech-list">
+                    <span class="tech-pill poppins"><i class="fa-brands fa-react" style="color:#61dafb"></i>React</span>
+                    <span class="tech-pill poppins"><span class="tech-pill-dj">dj</span>Django</span>
+                    <span class="tech-pill poppins"><i class="fa-solid fa-box-archive" style="color:#7c4de0"></i>AsyncStorage</span>
+                </div>
+
+                <div class="project-divider"></div>
+                <div class="project-footer">
+                    <a class="project-link poppins is-disabled" aria-disabled="true" title="Link coming soon"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a class="project-link project-link-demo poppins is-disabled" aria-disabled="true" title="Link coming soon">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Feature strip -->
+        <div class="projects-features reveal-stagger">
+            <div class="feature-item">
+                <div class="feature-icon feature-icon-blue"><i class="fa-solid fa-rocket"></i></div>
+                <div>
+                    <h4 class="poppins">Real-World Projects</h4>
+                    <p class="poppins">Built practical solutions to solve real problems.</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon feature-icon-blue"><i class="fa-solid fa-code"></i></div>
+                <div>
+                    <h4 class="poppins">Modern Tech Stack</h4>
+                    <p class="poppins">Using the latest technologies for better performance.</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon feature-icon-green"><i class="fa-solid fa-user-group"></i></div>
+                <div>
+                    <h4 class="poppins">Clean & Scalable Code</h4>
+                    <p class="poppins">Following best practices and writing maintainable code.</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon feature-icon-yellow"><i class="fa-solid fa-lightbulb"></i></div>
+                <div>
+                    <h4 class="poppins">Continuous Learning</h4>
+                    <p class="poppins">Always exploring new tools and improving my skills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Me Section -->
+    <section id="Contact" class="contact-section">
+        <div class="contact-decor contact-decor-dots-top"></div>
+        <div class="contact-decor contact-decor-ring"></div>
+        <div class="contact-decor contact-decor-dots-bottom"></div>
+
+        <div class="contact-eyebrow-wrap reveal">
+            <span class="contact-eyebrow-arrow contact-eyebrow-arrow-left"></span>
+            <span class="contact-eyebrow-icon"><i class="fa-solid fa-phone"></i></span>
+            <span class="contact-eyebrow poppins">Contact</span>
+            <span class="contact-eyebrow-arrow contact-eyebrow-arrow-right"></span>
+        </div>
+
+        <h2 class="contact-title reveal" style="--d:.1s">Let&rsquo;s Build Something Together</h2>
+        <p class="contact-desc poppins reveal" style="--d:.2s">Whether you&rsquo;re looking for a developer, have a project idea, or simply
+            want to connect, I&rsquo;d be happy to hear from you. Feel free to reach out, and I&rsquo;ll get back to
+            you as soon as possible.</p>
+
+        <div class="contact-card reveal-left" style="--d:.1s">
+            <div class="form" id="contactForm">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="contact-grid">
+                        <div class="contact-field">
+                            <label class="contact-label poppins" for="name">Your Name</label>
+                            <div class="contact-input-wrap">
+                                <i class="fa-solid fa-user contact-input-icon"></i>
+                                <input type="text" name="name" id="name" class="poppins" placeholder="Enter your name">
+                            </div>
+                        </div>
+
+                        <div class="contact-field">
+                            <label class="contact-label poppins" for="email">Your Email</label>
+                            <div class="contact-input-wrap">
+                                <i class="fa-solid fa-envelope contact-input-icon"></i>
+                                <input type="email" name="email" id="email" class="poppins" placeholder="Enter your email" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-field">
+                        <label class="contact-label poppins" for="subject">Subject</label>
+                        <div class="contact-input-wrap">
+                            <i class="fa-solid fa-tag contact-input-icon"></i>
+                            <input type="text" name="subject" id="subject" class="poppins" placeholder="Enter subject">
+                        </div>
+                    </div>
+
+                    <div class="contact-field">
+                        <label class="contact-label poppins" for="textarea">Your Message</label>
+                        <div class="contact-input-wrap contact-textarea-wrap">
+                            <i class="fa-solid fa-pen contact-input-icon contact-textarea-icon"></i>
+                            <textarea name="content" id="textarea" rows="6" class="poppins" placeholder="Write your message here..."></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="contact-submit poppins" id="submit">Submit Message <i class="fa-solid fa-paper-plane"></i></button>
+                    <p id="formStatus" class="poppins" role="status" aria-live="polite" style="margin-top: 1rem; font-size: .95rem;"></p>
+                </form>
+            </div>
+        </div>
+
+        <div class="contact-connect reveal-right" style="--d:.2s">
+            <h3 class="poppins">Let&rsquo;s Connect</h3>
+            <a href="mailto:pragnyat9437@gmail.com" class="contact-email-pill poppins"><i class="fa-solid fa-envelope"></i> pragnyat9437@gmail.com</a>
+            <div class="contact-social">
+                <a href="https://www.linkedin.com/in/pragnyat-bandan-a0773a255/" target="_blank" class="contact-social-icon social-linkedin" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/Pragnyat" target="_blank" class="contact-social-icon social-github" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:pragnyat9437@gmail.com" class="contact-social-icon social-email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- EmailJS Contact Form Wiring -->
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({ publicKey: "U6szClsInBaqT2byA" });
+
+            const form = document.querySelector("#contactForm form");
+            const submitBtn = document.getElementById("submit");
+            const status = document.getElementById("formStatus");
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                submitBtn.disabled = true;
+                const originalBtnText = submitBtn.innerHTML;
+                submitBtn.innerHTML = "Sending...";
+                status.textContent = "";
+                status.style.color = "";
+
+                emailjs.sendForm("service_c1porxt", "template_sxcjsmi", form)
+                    .then(function () {
+                        status.textContent = "Message sent successfully! I'll get back to you soon.";
+                        status.style.color = "#4ade80";
+                        form.reset();
+                    })
+                    .catch(function (error) {
+                        status.textContent = "Something went wrong. Please try again or email me directly.";
+                        status.style.color = "#f87171";
+                        console.error("EmailJS error:", error);
+                    })
+                    .finally(function () {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalBtnText;
+                    });
+            });
+        })();
+    </script>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <div class="footer-bar reveal-stagger">
+            <p class="footer-copy poppins">&copy; 2026 <strong>Pragnyat Bandan.</strong> All Rights Reserved.</p>
+            <div class="footer-social">
+                <a href="https://github.com/Pragnyat" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/pragnyat-bandan-a0773a255/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="mailto:pragnyat9437@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#home" class="footer-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+            <div class="footer-right">
+                <p class="footer-passion poppins"><i class="fa-solid fa-heart"></i> Built with passion</p>
+                <span class="footer-divider">|</span>
+                <p class="footer-made poppins">Made with <i class="fa-solid fa-code"></i> and <i class="fa-solid fa-mug-hot"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Preloader, scroll-reveal & navbar transitions -->
+    <script type="text/javascript">
+        // Preloader: show for a minimum delay, then fade out and play hero entrance
+        (function () {
+            var pageStart = Date.now();
+            window.__heroState = { pl: false, view: true, sync: function () { document.body.classList.toggle("hero-loaded", this.pl && this.view); } };
+            var minDelay = 2400; // ms, minimum time the loader stays visible
+
+            function hidePreloader() {
+                var elapsed = Date.now() - pageStart;
+                var wait = Math.max(minDelay - elapsed, 0);
+                setTimeout(function () {
+                    var pre = document.getElementById("preloader");
+                    if (pre) {
+                        pre.classList.add("preloader-hide");
+                        setTimeout(function () { pre.remove(); }, 650);
+                    }
+                    window.__heroState.pl = true;
+                    window.__heroState.sync();
+                    document.documentElement.classList.remove("is-loading");
+                }, wait);
+            }
+
+            if (document.readyState === "complete") {
+                hidePreloader();
+            } else {
+                window.addEventListener("load", hidePreloader);
+            }
+        })();
+
+        // Scroll-triggered reveal animations
+        document.addEventListener("DOMContentLoaded", function () {
+            var revealEls = document.querySelectorAll(".reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-stagger");
+
+            if ("IntersectionObserver" in window) {
+                var timers = new WeakMap();
+                function show(el) {
+                    el.classList.remove("reveal-above");
+                    el.classList.add("reveal-visible");
+                    if (el.classList.contains("reveal-stagger")) {
+                        clearTimeout(timers.get(el));
+                        timers.set(el, setTimeout(function () { el.classList.add("reveal-done"); }, 1500));
+                    }
+                }
+                function hide(el, exitedAbove) {
+                    clearTimeout(timers.get(el));
+                    el.classList.remove("reveal-visible", "reveal-done");
+                    el.classList.toggle("reveal-above", exitedAbove);
+                }
+                // Toggles on every enter/exit, so animations replay when scrolling down AND up.
+                // Hiding only happens once an element is fully out of view (hysteresis avoids flicker).
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            if (entry.intersectionRatio >= 0.1) show(entry.target);
+                        } else {
+                            hide(entry.target, entry.boundingClientRect.top < 0);
+                        }
+                    });
+                }, { threshold: [0, 0.1], rootMargin: "0px 0px -6% 0px" });
+                revealEls.forEach(function (el) { observer.observe(el); });
+
+                // Replay the hero entrance whenever the hero text scrolls back into view
+                var heroLeft = document.querySelector(".hero-left");
+                if (heroLeft) {
+                    new IntersectionObserver(function (entries) {
+                        entries.forEach(function (e) {
+                            var hs = window.__heroState;
+                            if (!hs) return;
+                            if (!e.isIntersecting) { hs.view = false; hs.sync(); }
+                            else if (e.intersectionRatio >= 0.3) { hs.view = true; hs.sync(); }
+                        });
+                    }, { threshold: [0, 0.3] }).observe(heroLeft);
+                }
+            } else {
+                // Fallback: just show everything
+                revealEls.forEach(function (el) { el.classList.add("reveal-visible"); });
+            }
+
+            // Navbar subtle transition on scroll
+            var navbar = document.getElementById("navbar");
+            if (navbar) {
+                var onScroll = function () {
+                    if (window.scrollY > 40) {
+                        navbar.classList.add("navbar-scrolled");
+                    } else {
+                        navbar.classList.remove("navbar-scrolled");
+                    }
+                };
+                onScroll();
+                window.addEventListener("scroll", onScroll, { passive: true });
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        // Mobile menu + active-section highlighting
+        (function () {
+            var nav = document.getElementById("navbar");
+            var btn = document.getElementById("navToggle");
+            if (!nav || !btn) return;
+            function setOpen(open) {
+                nav.classList.toggle("nav-open", open);
+                btn.setAttribute("aria-expanded", open ? "true" : "false");
+            }
+            btn.addEventListener("click", function () { setOpen(!nav.classList.contains("nav-open")); });
+            nav.querySelectorAll("#navMenu a").forEach(function (a) {
+                a.addEventListener("click", function () { setOpen(false); });
+            });
+            document.addEventListener("keydown", function (e) { if (e.key === "Escape") setOpen(false); });
+            window.addEventListener("resize", function () { if (window.innerWidth > 860) setOpen(false); });
+
+            if ("IntersectionObserver" in window) {
+                var links = {};
+                nav.querySelectorAll("#navMenu a").forEach(function (a) { links[a.getAttribute("href").slice(1)] = a; });
+                var spy = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (en) {
+                        if (en.isIntersecting && links[en.target.id]) {
+                            Object.keys(links).forEach(function (k) { links[k].classList.remove("is-active"); });
+                            links[en.target.id].classList.add("is-active");
+                        }
+                    });
+                }, { rootMargin: "-45% 0px -50% 0px" });
+                document.querySelectorAll("main > section[id]").forEach(function (sec) { spy.observe(sec); });
+            }
+        })();
+    </script>
+</body>
+</html>
