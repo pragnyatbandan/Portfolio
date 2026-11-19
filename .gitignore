@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+env/
+
+# Environment / secrets
+.env
+.env.*
+
+# Local database (not used in production)
+db.sqlite3
+
+# Build output
+staticfiles/
+.vercel/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
